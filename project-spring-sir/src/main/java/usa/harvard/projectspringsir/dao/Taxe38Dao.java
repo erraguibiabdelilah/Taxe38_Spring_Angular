@@ -7,9 +7,6 @@ import usa.harvard.projectspringsir.bean.Taxe38;
 import java.util.Optional;
 
 public interface Taxe38Dao extends JpaRepository<Taxe38,Long> {
-    @Override
-    Optional<Taxe38> findById(Long id);
-
-    @Override
-    void deleteById(Long id);
+    Optional<Taxe38> findByCode(String code);
+    void deleteByCode(String code);
 }

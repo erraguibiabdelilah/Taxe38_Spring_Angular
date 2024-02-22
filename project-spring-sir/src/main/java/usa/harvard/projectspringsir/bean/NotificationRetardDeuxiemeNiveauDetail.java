@@ -1,4 +1,5 @@
 package usa.harvard.projectspringsir.bean;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
@@ -9,6 +10,8 @@ import lombok.NoArgsConstructor;
 public class NotificationRetardDeuxiemeNiveauDetail {
      @Id
      private Long id;
+     @Column(unique = true)
+     private String code;
      private double trim;
      private double montantBase;
      private double montantRetardPremierMois;

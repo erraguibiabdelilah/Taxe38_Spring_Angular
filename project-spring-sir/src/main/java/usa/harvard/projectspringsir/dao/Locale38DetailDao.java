@@ -7,9 +7,6 @@ import usa.harvard.projectspringsir.bean.Locale38Detail;
 import java.util.Optional;
 
 public interface Locale38DetailDao extends JpaRepository<Locale38Detail,Long> {
-    @Override
-    Optional<Locale38Detail> findById(Long id);
-
-    @Override
-    void deleteById(Long id);
+    Optional<Locale38Detail> findByCode(String code);
+    void deleteByCode(String code);
 }

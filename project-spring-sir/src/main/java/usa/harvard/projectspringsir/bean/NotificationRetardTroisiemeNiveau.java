@@ -1,4 +1,5 @@
 package usa.harvard.projectspringsir.bean;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
@@ -13,6 +14,8 @@ import java.util.Date;
 public class NotificationRetardTroisiemeNiveau {
     @Id
     private Long id;
+    @Column(unique = true)
+    private String code;
     @ManyToOne
     private Locale locale;
     @ManyToOne

@@ -1,4 +1,5 @@
 package usa.harvard.projectspringsir.bean;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
@@ -13,6 +14,8 @@ public class Taxe38Detail {
     //type de material !! wach bache wela icone wela chi haja 5era
     @Id
     private Long id;
+    @Column(unique = true)
+    private String code;
     @ManyToOne
     private Locale38Detail locale38Detail;
     // chehal men metre kari
