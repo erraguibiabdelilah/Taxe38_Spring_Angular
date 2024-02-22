@@ -8,8 +8,8 @@ import java.util.Optional;
 
 public interface NotificationRetardDeuxiemeNiveauDao extends JpaRepository<NotificationRetardDeuxiemeNiveau,Long> {
     @Override
-    Optional<NotificationRetardDeuxiemeNiveau> findById(Long aLong);
+    Optional<NotificationRetardDeuxiemeNiveau> findById(Long id);
 
     @Override
-    void deleteById(Long aLong);
+    void deleteById(Long id);
 }

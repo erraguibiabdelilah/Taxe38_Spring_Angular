@@ -8,8 +8,8 @@ import java.util.Optional;
 
 public interface Locale38DetailDao extends JpaRepository<Locale38Detail,Long> {
     @Override
-    Optional<Locale38Detail> findById(Long aLong);
+    Optional<Locale38Detail> findById(Long id);
 
     @Override
-    void deleteById(Long aLong);
+    void deleteById(Long id);
 }

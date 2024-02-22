@@ -8,8 +8,8 @@ import java.util.Optional;
 
 public interface Taxe38Dao extends JpaRepository<Taxe38,Long> {
     @Override
-    Optional<Taxe38> findById(Long aLong);
+    Optional<Taxe38> findById(Long id);
 
     @Override
-    void deleteById(Long aLong);
+    void deleteById(Long id);
 }

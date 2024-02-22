@@ -7,8 +7,8 @@ import java.util.Optional;
 
 public interface LocaleDao extends JpaRepository<Locale,Long> {
     @Override
-    Optional<Locale> findById(Long aLong);
+    Optional<Locale> findById(Long id);
 
     @Override
-    void deleteById(Long aLong);
+    void deleteById(Long id);
 }
