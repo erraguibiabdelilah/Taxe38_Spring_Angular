@@ -8,6 +8,6 @@ import java.util.Optional;
 
 @Repository
 public interface NotificationRetardDeuxiemeNiveauDetailDao extends JpaRepository <NotificationRetardDeuxiemeNiveauDetail , Long> {
-    Optional<NotificationRetardDeuxiemeNiveauDetail> findByCode(String code);
-    void deleteByCode(String code);
+    NotificationRetardDeuxiemeNiveauDetail findByCode(String code);
+    int deleteByCode(String code);
 }

@@ -7,6 +7,6 @@ import usa.harvard.projectspringsir.bean.NotificationRetardDeuxiemeNiveau;
 import java.util.Optional;
 
 public interface NotificationRetardDeuxiemeNiveauDao extends JpaRepository<NotificationRetardDeuxiemeNiveau,Long> {
-    Optional<NotificationRetardDeuxiemeNiveau> findByCode(String code);
-    void deleteByCode(String code);
+    NotificationRetardDeuxiemeNiveau findByCode(String code);
+    int deleteByCode(String code);
 }
