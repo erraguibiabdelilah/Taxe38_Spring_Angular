@@ -5,6 +5,6 @@ import org.springframework.stereotype.Repository;
 import usa.harvard.projectspringsir.bean.Quartie;
 @Repository
 public interface QuartieDao extends JpaRepository<Quartie,Long > {
-    Quartie FindByCode(String code ) ;
-    int DeleteByCode(String code) ;
+    Quartie findByCode(String code ) ;
+    int deleteByCode(String code) ;
 }

@@ -5,6 +5,6 @@ import org.springframework.stereotype.Repository;
 import usa.harvard.projectspringsir.bean.Redevable;
 @Repository
 public interface RedevableDao extends JpaRepository<Redevable,Long> {
-    Redevable FindByCode(String code ) ;
-    int DeleteByCode(String code ) ;
+    Redevable findByCode(String code ) ;
+    int deleteByCode(String code ) ;
 }
