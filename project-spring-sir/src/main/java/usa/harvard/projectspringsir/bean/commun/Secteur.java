@@ -1,4 +1,4 @@
-package usa.harvard.projectspringsir.bean;
+package usa.harvard.projectspringsir.bean.commun;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -6,21 +6,16 @@ import jakarta.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import java.util.Date;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class NotificationRetardPremierNiveau {
+public class Secteur {
     @Id
     private Long id;
     @Column(unique = true)
     private String code;
+    private String libelle;
     @ManyToOne
-    private Locale locale;
-    @ManyToOne
-    private Redevable redevable;
-    private Date anne;
-    private double montantBase;
-    private double montantRetardPremierMois;
+    private Ville ville;
 }

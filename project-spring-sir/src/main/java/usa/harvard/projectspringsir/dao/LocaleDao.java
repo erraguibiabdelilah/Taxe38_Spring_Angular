@@ -2,10 +2,8 @@ package usa.harvard.projectspringsir.dao;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import usa.harvard.projectspringsir.bean.Locale;
-import usa.harvard.projectspringsir.bean.Locale38Detail;
+import usa.harvard.projectspringsir.bean.commun.Locale;
 
-import java.util.Optional;
 @Repository
 public interface LocaleDao extends JpaRepository<Locale,Long> {
     Locale findByCode(String code);

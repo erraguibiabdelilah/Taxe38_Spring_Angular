@@ -1,10 +1,13 @@
-package usa.harvard.projectspringsir.bean;
+package usa.harvard.projectspringsir.bean.taxe38;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import usa.harvard.projectspringsir.bean.taxe38.TypeLocale38Detail;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -14,7 +17,8 @@ public class Locale38Detail {
     private Long id;
     @Column(unique = true)
     private String code;
-    private String typeLocale38Detail;
+    @ManyToOne
+    private TypeLocale38Detail typeLocale38Detail;
     //surface
     private double superficie;
     private boolean active;

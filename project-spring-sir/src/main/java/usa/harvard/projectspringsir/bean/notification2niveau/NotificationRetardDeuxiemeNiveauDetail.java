@@ -1,10 +1,13 @@
-package usa.harvard.projectspringsir.bean;
+package usa.harvard.projectspringsir.bean.notification2niveau;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import usa.harvard.projectspringsir.bean.taxe38.Trim;
+
 @Data @AllArgsConstructor @NoArgsConstructor
 @Entity
 public class NotificationRetardDeuxiemeNiveauDetail {
@@ -12,7 +15,8 @@ public class NotificationRetardDeuxiemeNiveauDetail {
      private Long id;
      @Column(unique = true)
      private String code;
-     private double trim;
+     @ManyToOne
+     private Trim trim;
      private double montantBase;
      private double montantRetardPremierMois;
      private double montantRetardAutreMois;

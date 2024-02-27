@@ -1,4 +1,4 @@
-package usa.harvard.projectspringsir.bean;
+package usa.harvard.projectspringsir.bean.commun;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;

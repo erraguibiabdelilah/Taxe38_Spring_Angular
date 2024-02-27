@@ -1,9 +1,11 @@
-package usa.harvard.projectspringsir.bean;
+package usa.harvard.projectspringsir.bean.taxe38;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import java.util.Date;
+
+import java.time.LocalDate;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -11,12 +13,17 @@ import java.util.Date;
 public class TauxTaxe38 {
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String code;
     @Column(unique = true)
-    private String CategorieLocale;
+    private String code;
+
+
+    @ManyToOne
+    private TypeLocale38Detail typeLocale38Detail;
+    @ManyToOne
+    private CategorieLocale categorieLocale;
     private double montantParMetreCarre;
-    private Date dateMin;
-    private Date dateMax;
+    private LocalDate dateMin;
+    private LocalDate dateMax;
     private double pourcentagePremierRetard;
     private double pourcentageAutreMoisRetard;
 }
