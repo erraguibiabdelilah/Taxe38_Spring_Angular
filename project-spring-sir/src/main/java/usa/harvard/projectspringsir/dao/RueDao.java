@@ -5,6 +5,6 @@ import org.springframework.stereotype.Repository;
 import usa.harvard.projectspringsir.bean.Rue;
 @Repository
 public interface RueDao extends JpaRepository<Rue,Long > {
-    Rue FindByCode(String code ) ;
-    int DeleteByCode(String code ) ;
+    Rue findByCode(String code ) ;
+    int deleteByCode(String code ) ;
 }
