@@ -10,7 +10,7 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 
-public class TauxTaxe38 {
+public class TauxTaxe38Dto {
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String code;

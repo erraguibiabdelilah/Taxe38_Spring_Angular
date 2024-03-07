@@ -18,5 +18,4 @@ public class Locale38Detail {
     //surface
     private double superficie;
     private boolean active;
-    //mohammed ezzaim Locale38Detail
 }

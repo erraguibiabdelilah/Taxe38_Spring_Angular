@@ -1,6 +1,5 @@
 package usa.harvard.projectspringsir.ws.dto;
 import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
@@ -11,15 +10,15 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 
-public class NotificationRetardTroisiemeNiveau {
+public class NotificationRetardTroisiemeNiveauDto {
     @Id
     private Long id;
     @Column(unique = true)
     private String code;
     @ManyToOne
-    private Locale locale;
+    private LocaleDto localeDto;
     @ManyToOne
-    private Redevable redevable;
+    private RedevableDto redevableDto;
     private int anne;
     private String trim;
 }

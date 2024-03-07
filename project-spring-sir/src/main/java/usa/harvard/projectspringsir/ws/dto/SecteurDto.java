@@ -1,6 +1,5 @@
 package usa.harvard.projectspringsir.ws.dto;
 import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
@@ -11,12 +10,12 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 
-public class Rue {
+public class SecteurDto {
     @Id
     private Long id;
     @Column(unique = true)
     private String code;
     private String libelle;
     @ManyToOne
-    private Quartie quartie;
+    private VilleDto villeDto;
 }

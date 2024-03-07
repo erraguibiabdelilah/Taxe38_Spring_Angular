@@ -1,6 +1,5 @@
 package usa.harvard.projectspringsir.ws.dto;
 import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
@@ -18,7 +17,7 @@ public class Taxe38Detail {
     @Column(unique = true)
     private String code;
     @ManyToOne
-    private Locale38Detail locale38Detail;
+    private Locale38DetailDto locale38DetailDto;
     // chehal men metre kari
     private double montantBase;
     private double montantRetardPremierMois;
