@@ -11,6 +11,4 @@ public class TypeLocale38Detail {
     private Long id;
     private String code;
     private String libelle; //type panneau publicitaire
-
-
 }

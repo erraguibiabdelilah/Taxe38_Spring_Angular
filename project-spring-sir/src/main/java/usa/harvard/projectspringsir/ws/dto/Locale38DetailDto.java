@@ -14,8 +14,6 @@ public class Locale38DetailDto {
     @Column(unique = true)
     private String code;
     private String typeLocale38Detail;
-    //surface
     private double superficie;
     private boolean active;
-    //mohammed ezzaim Locale38DetailDto
 }

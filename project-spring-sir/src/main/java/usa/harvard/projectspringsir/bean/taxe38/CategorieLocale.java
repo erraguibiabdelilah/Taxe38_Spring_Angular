@@ -11,6 +11,4 @@ public class CategorieLocale {
     private Long id;
     private String libelle;
     private String code;
-
-
 }

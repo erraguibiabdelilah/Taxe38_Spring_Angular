@@ -15,15 +15,14 @@ public class TauxTaxe38 {
     private Long id;
     @Column(unique = true)
     private String code;
-
-
-    @ManyToOne
-    private TypeLocale38Detail typeLocale38Detail;
-    @ManyToOne
-    private CategorieLocale categorieLocale;
     private double montantParMetreCarre;
     private LocalDate dateMin;
     private LocalDate dateMax;
     private double pourcentagePremierRetard;
     private double pourcentageAutreMoisRetard;
+
+    @ManyToOne
+    private TypeLocale38Detail typeLocale38Detail;
+    @ManyToOne
+    private CategorieLocale categorieLocale;
 }

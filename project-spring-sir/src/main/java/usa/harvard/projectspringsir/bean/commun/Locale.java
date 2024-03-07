@@ -17,7 +17,8 @@ public class Locale {
     @ManyToOne
     private Rue rue;
     private String complementAdressse;
+//    @ManyToOne
+//    private Redevable redevable;
     @ManyToOne
     private CategorieLocale categorieLocale;
-
 }

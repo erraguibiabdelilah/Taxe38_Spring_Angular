@@ -6,8 +6,6 @@ import jakarta.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import usa.harvard.projectspringsir.bean.taxe38.TypeLocale38Detail;
-
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -17,6 +15,7 @@ public class Locale38Detail {
     private Long id;
     @Column(unique = true)
     private String code;
+    //type de panneau
     @ManyToOne
     private TypeLocale38Detail typeLocale38Detail;
     //surface
