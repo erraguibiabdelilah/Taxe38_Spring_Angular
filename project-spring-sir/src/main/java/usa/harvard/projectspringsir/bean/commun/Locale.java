@@ -10,15 +10,13 @@ import usa.harvard.projectspringsir.bean.taxe38.CategorieLocale;
 @NoArgsConstructor
 @Entity
 public class Locale {
-    @Id
+    @Id @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
     @Column(unique = true)
     private String code;
     @ManyToOne
     private Rue rue;
     private String complementAdressse;
-//    @ManyToOne
-//    private Redevable redevable;
     @ManyToOne
     private CategorieLocale categorieLocale;
 }
