@@ -5,6 +5,7 @@ import jakarta.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import usa.harvard.projectspringsir.ws.dto.Locale38DetailDto;
 
 @Data
 @AllArgsConstructor

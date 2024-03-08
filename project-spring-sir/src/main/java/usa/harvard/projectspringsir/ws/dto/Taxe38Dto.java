@@ -5,6 +5,9 @@ import jakarta.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import usa.harvard.projectspringsir.ws.dto.LocaleDto;
+import usa.harvard.projectspringsir.ws.dto.RedevableDto;
+import usa.harvard.projectspringsir.ws.dto.TauxTaxe38Dto;
 
 import java.util.Date;
 @Data
