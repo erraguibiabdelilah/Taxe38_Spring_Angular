@@ -27,12 +27,12 @@ public class VilleWs {
         return villeService.findByCode(code);
     }
 
-    @PostMapping("/")
+    @PostMapping()
     public Ville save(@RequestBody Ville ville) {
         return villeService.save(ville);
     }
 
-    @GetMapping("/")
+    @GetMapping()
     public List<Ville> findAll() {
         return villeService.findAll();
     }
