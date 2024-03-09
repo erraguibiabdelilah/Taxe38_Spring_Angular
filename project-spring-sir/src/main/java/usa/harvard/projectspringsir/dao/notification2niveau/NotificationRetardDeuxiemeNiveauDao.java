@@ -1,4 +1,4 @@
-package usa.harvard.projectspringsir.dao;
+package usa.harvard.projectspringsir.dao.notification2niveau;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import usa.harvard.projectspringsir.bean.notification2niveau.NotificationRetardDeuxiemeNiveau;

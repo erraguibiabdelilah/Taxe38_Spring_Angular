@@ -9,7 +9,11 @@ import usa.harvard.projectspringsir.bean.taxe38.CategorieLocale;
 import usa.harvard.projectspringsir.bean.taxe38.TauxTaxe38;
 import usa.harvard.projectspringsir.bean.taxe38.Trim;
 import usa.harvard.projectspringsir.bean.taxe38.TypeLocale38Detail;
-import usa.harvard.projectspringsir.dao.*;
+import usa.harvard.projectspringsir.dao.communDao.*;
+import usa.harvard.projectspringsir.dao.taxe38Dao.CategorieLocaleDao;
+import usa.harvard.projectspringsir.dao.taxe38Dao.TauxTaxe38Dao;
+import usa.harvard.projectspringsir.dao.taxe38Dao.TrimDao;
+import usa.harvard.projectspringsir.dao.taxe38Dao.TypeLocale38DetailDao;
 
 import java.time.LocalDate;
 import java.time.Month;

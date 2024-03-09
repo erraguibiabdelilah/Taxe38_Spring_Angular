@@ -15,5 +15,4 @@ public class Ville {
     private String code;
     private String libelle;
 
-
 }

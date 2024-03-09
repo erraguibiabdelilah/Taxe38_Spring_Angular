@@ -1,4 +1,4 @@
-package usa.harvard.projectspringsir.dao;
+package usa.harvard.projectspringsir.dao.taxe38Dao;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
