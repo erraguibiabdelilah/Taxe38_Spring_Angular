@@ -1,7 +1,5 @@
 package usa.harvard.projectspringsir.ws.facade;
 
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
@@ -9,13 +7,15 @@ import usa.harvard.projectspringsir.bean.commun.Ville;
 import usa.harvard.projectspringsir.service.imple.VilleServiceImpl;
 
 import java.util.List;
-@AllArgsConstructor
-@NoArgsConstructor
+
 @RestController
 @RequestMapping("api/ville")
 public class VilleWs {
-
     private  VilleServiceImpl villeService;
+    public VilleWs(VilleServiceImpl villeService) {
+        this.villeService = villeService;
+    }
+
     @DeleteMapping("/code/{code}")
     @Transactional
     public int deleteByCode(@PathVariable String code) {
@@ -28,7 +28,7 @@ public class VilleWs {
     }
 
     @PostMapping("/")
-    public Ville save(@RequestBody Ville ville) {
+    public int save(@RequestBody Ville ville) {
         return villeService.save(ville);
     }
 

@@ -7,6 +7,6 @@ import java.util.List;
 public interface VilleService {
      int deleteByCode(String code);
      Ville findByCode(String code);
-     Ville save(Ville ville);
+     int save(Ville ville);
      List<Ville> findAll();
 }

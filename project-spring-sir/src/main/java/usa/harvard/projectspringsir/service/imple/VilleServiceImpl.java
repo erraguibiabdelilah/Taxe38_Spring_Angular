@@ -19,8 +19,14 @@ public class VilleServiceImpl implements VilleService {
         return villeDao.findByCode(code);
     }
 
-    public Ville save(Ville ville) {
-        return villeDao.save(ville);
+    public int save(Ville ville) {
+        if(villeDao.findByCode(ville.getCode())!=null){
+            return -1;
+        }
+        else {
+            villeDao.save(ville);
+            return 1;
+        }
     }
 
     public List<Ville> findAll() {
