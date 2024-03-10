@@ -2,7 +2,7 @@ package usa.harvard.projectspringsir.dao.communDao;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import usa.harvard.projectspringsir.bean.commun.Quartie;
+import usa.harvard.projectspringsir.bean.communBean.Quartie;
 @Repository
 public interface QuartieDao extends JpaRepository<Quartie,Long > {
     Quartie findByCode(String code ) ;

@@ -1,8 +1,8 @@
 package usa.harvard.projectspringsir.ws.converter;
 
 import org.springframework.beans.BeanUtils;
-import usa.harvard.projectspringsir.bean.commun.Quartie;
-import usa.harvard.projectspringsir.ws.dto.QuartieDto;
+import usa.harvard.projectspringsir.bean.communBean.Quartie;
+import usa.harvard.projectspringsir.ws.dto.communDto.QuartieDto;
 
 import java.util.List;
 import java.util.stream.Collectors;

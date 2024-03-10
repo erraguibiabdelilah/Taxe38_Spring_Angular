@@ -1,10 +1,8 @@
 package usa.harvard.projectspringsir.ws.converter;
 
 import org.springframework.beans.BeanUtils;
-import usa.harvard.projectspringsir.bean.commun.Redevable;
-import usa.harvard.projectspringsir.bean.commun.Rue;
-import usa.harvard.projectspringsir.ws.dto.RedevableDto;
-import usa.harvard.projectspringsir.ws.dto.RueDto;
+import usa.harvard.projectspringsir.bean.communBean.Rue;
+import usa.harvard.projectspringsir.ws.dto.communDto.RueDto;
 
 import java.util.List;
 import java.util.stream.Collectors;
