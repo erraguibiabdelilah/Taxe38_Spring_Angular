@@ -14,11 +14,11 @@ public class RedevableWs {
     @DeleteMapping("/code/{code}")
     @Transactional
     public int deleteByCode(@PathVariable String code) {
-        return redevableService.deleteByCode(code);
+        return redevableService.deleteByCin(code);
     }
     @GetMapping("/code/{code}")
     public Redevable findByCode(@PathVariable String code) {
-        return redevableService.findByCode(code);
+        return redevableService.findByCin(code);
     }
     @PostMapping()
     public int save(@RequestBody  Redevable redevable) {

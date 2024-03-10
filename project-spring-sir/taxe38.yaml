@@ -1,0 +1,191 @@
+jpa:
+  generateStrategy: IDENTITY
+
+project:
+  name: taxe-38
+  domain: org
+  groupID: bshg
+  usedJava: jakarta
+  port: 8090
+
+properties:
+  type: properties
+  loadData: true
+  frontend: http//:localhost:4200
+
+db:
+  type: mysql
+  name: taxe38
+
+config:
+  security: true
+  dataLoader: true
+  buildTool: maven
+  structure: speciality
+  complexity: simple
+
+packagesName:
+  entity: bean
+  repository: dao
+  exceptions: exceptions
+  service: service
+  webservice: ws
+  converter: converter
+  dto: dto
+  controller: ws
+
+namingTemplate:
+  controller: '{C}Ws'
+
+roles:
+  - ADMIN
+
+packages:
+  - name: commun
+    entities:
+      - name: Locale
+        fields:
+          - code
+          - complementAdresse
+          - superficie|double
+          - notificationRetardPremierNiveau|list-NotificationRetardPremierNiveau
+          - notificationRetardDeuxiemeNiveau|list-NotificationRetardDeuxiemeNiveau
+          - notificationRetardTroisiemeNiveau|list-NotificationRetardTroisiemeNiveau
+          - taxe38|list-Taxe38
+
+      - name: Quartie
+        fields:
+          - code
+          - libelle
+          - rues|list-Rue
+      - name: Rue
+        fields:
+          - code
+          - libelle
+          - locals|list-Locale
+      - name: Secteur
+        fields:
+          - code
+          - libelle
+          - quarties|list-Quartie
+      - name: Ville
+        fields:
+          - code
+          - libelle
+          - secteurs|list-Secteur
+      - name: Redevable
+        fields:
+          - cin
+          - nom
+          - prenom
+          - email
+          - locales|list-Locale
+          - notificationRetardPremierNiveau|list-NotificationRetardPremierNiveau
+          - notificationRetardDeuxiemeNiveau|list-NotificationRetardDeuxiemeNiveau
+          - notificationRetardTroisiemeNiveau|list-NotificationRetardTroisiemeNiveau
+          - taxe38|list-Taxe38
+
+  - name: notification1Niv
+    entities:
+      - name: NotificationRetardPremierNiveau
+        fields:
+          - code
+          - montantBase|double
+          - annee|int
+
+  - name: notification2Niv
+    entities:
+      - name: NotificationRetardDeuxiemeNiveau
+        fields:
+          - code
+          - montantBase|double
+          - annee|int
+          - montantRetardPremierMois|double
+          - montantRetardAutreMois|double
+          - montantTotal|double
+
+      - name: NotificationRetardDeuxiemeNiveauDetail
+        fields:
+          - code
+          - trim|Trim
+          - montantBase|double
+          - montantRetardPremierMois|double
+          - montantRetardAutreMois|double
+          - montantTotal|double
+
+      - name: NotificationRetardDeuxiemeNiveauDetailType38
+        fields:
+          - code
+          - typeLocale38
+          - montantBase|double
+          - montantRetardPremierMois|double
+          - montantRetardAutreMois|double
+          - montantTotal|double
+
+  - name: notification3Niv
+    entities:
+      - name: NotificationRetardTroisiemeNiveau
+        fields:
+          - code
+          - annee|int
+          - trim|Trim
+
+  - name: taxe38
+    entities:
+      - name: Trim
+        fields:
+          - libelle
+          - numero|int
+
+      - name: CategorieLocale
+        fields:
+          - code
+          - libelle
+          - locals|list-Locale
+          - tauxTaxe38|list-TauxTaxe38
+
+      - name: Locale38Detail
+        fields:
+          - code
+          - superficie|double
+          - active|double
+          - taxe38Detail|list-Taxe38Detail
+
+      - name: TypeLocale38Detail
+        fields:
+          - code
+          - libelle
+          - locale38Detail|list-Locale38Detail
+          - tauxTaxe38|list-TauxTaxe38
+
+      - name: TauxTaxe38
+        fields:
+          - code
+          - libelle
+          - montantParMetreCarre|double
+          - pourcentagePremierRetard|double
+          - pourcentageAutreMoisRetard|double
+          - dateMin|date
+          - dateMax|date
+          - taxe38Detail|list-Taxe38Detail
+
+      - name: Taxe38
+        fields:
+          - code
+          - libelle
+          - montantBase|double
+          - montantRetardPremierMois|double
+          - montantTotal|double
+          - nombreMoisRetard|int
+          - datePresentation|date
+          - trim|Trim
+          - taxe38Detail|list-Taxe38Detail
+
+      - name: Taxe38Detail
+        fields:
+          - code
+          - libelle
+          - montantBase|double
+          - montantRetardPremierMois|double
+          - montantRetardAutreM ois|double
+

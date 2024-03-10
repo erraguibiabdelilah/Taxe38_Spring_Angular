@@ -8,11 +8,12 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Entity
 public class Redevable {
-    @Id @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @Id @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     @Column(unique = true)
-    private String code;
-    private String  name ;
-    private String prenom;
+    private String cin;
     private String email;
+    private  String password;
+    private String nom ;
+    private String prenom ;
 }

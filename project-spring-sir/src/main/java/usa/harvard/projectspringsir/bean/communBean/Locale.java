@@ -15,10 +15,18 @@ public class Locale {
     @Column(unique = true)
     private String code;
     @ManyToOne
-    private Rue rue;
+   private Rue rue ;
     private String complementAdressse;
     @ManyToOne
     private CategorieLocale categorieLocale;
     @ManyToOne
     private Redevable redevable;
+
+    public Rue getRue() {
+        return rue;
+    }
+
+    public void setRue(Rue rue) {
+        this.rue = rue;
+    }
 }

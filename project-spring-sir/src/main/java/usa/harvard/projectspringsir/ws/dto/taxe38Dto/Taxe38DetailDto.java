@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 
-public class Taxe38Detail {
+public class Taxe38DetailDto {
     //type de material !! wach bache wela icone wela chi haja 5era
     @Id
     private Long id;

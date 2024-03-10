@@ -12,9 +12,9 @@ public class RedevableDto {
     @Id
     private Long id;
     @Column(unique = true)
-    private String code;
-    private String ref;
-    private String  name ;
-    private String prenom;
+    private String cin;
     private String email;
+    private  String password;
+    private String nom ;
+    private String prenom ;
 }

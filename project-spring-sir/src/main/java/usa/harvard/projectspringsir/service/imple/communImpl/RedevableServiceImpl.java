@@ -13,18 +13,18 @@ public class RedevableServiceImpl implements RedevableService {
     @Autowired
     private RedevableDao redevableDao;
     @Override
-    public int deleteByCode(String code) {
-        return redevableDao.deleteByCode(code);
+    public int deleteByCin(String cin) {
+        return redevableDao.deleteByCin(cin);
     }
 
     @Override
-    public Redevable findByCode(String code) {
-        return  redevableDao.findByCode(code);
+    public Redevable findByCin(String cin) {
+        return  redevableDao.findByCin(cin);
     }
 
     @Override
     public int save(Redevable redevable) {
-        if(redevableDao.findByCode(redevable.getCode())!=null){
+        if(redevableDao.findByCin(redevable.getCin())!=null){
             return -1;
         }
         else {
