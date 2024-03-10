@@ -8,7 +8,7 @@ import usa.harvard.projectspringsir.service.intefaceService.communInter.QuartieS
 
 import java.util.List;
 @RestController
-@RequestMapping("api/Quartie")
+@RequestMapping("api/Quartie/")
 public class QuartieWs {
     @DeleteMapping("/code/{code}")
     @Transactional
@@ -21,12 +21,12 @@ public class QuartieWs {
         return quartieService.findByCode(code);
     }
 
-    @PostMapping("/")
+    @PostMapping()
     public int save(@RequestBody  Quartie quartie) {
         return quartieService.save(quartie);
     }
 
-    @GetMapping("/")
+    @GetMapping()
     public List<Quartie> findAll() {
         return quartieService.findAll();
     }

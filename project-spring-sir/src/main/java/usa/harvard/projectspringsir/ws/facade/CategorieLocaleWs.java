@@ -9,7 +9,7 @@ import usa.harvard.projectspringsir.service.intefaceService.taxe38Inter.Categori
 import java.util.List;
 
 @RestController
-@RequestMapping("api/categories")
+@RequestMapping("api/categories/")
 public class CategorieLocaleWs {
     @DeleteMapping("/code/{code}")
     @Transactional
@@ -20,11 +20,11 @@ public class CategorieLocaleWs {
     public CategorieLocale findByCode(@PathVariable String code) {
         return categorieLocaleService.findByCode(code);
     }
-    @PostMapping("/")
+    @PostMapping()
     public int save(@RequestBody CategorieLocale ville) {
         return categorieLocaleService.save(ville);
     }
-    @GetMapping("/")
+    @GetMapping()
     public List<CategorieLocale> findAll() {
         return categorieLocaleService.findAll();
     }

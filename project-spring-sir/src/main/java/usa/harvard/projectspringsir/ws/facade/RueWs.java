@@ -9,7 +9,7 @@ import usa.harvard.projectspringsir.service.intefaceService.communInter.RueServi
 import java.util.List;
 
 @RestController
-@RequestMapping("api/rue")
+@RequestMapping("api/rue/")
 public class RueWs {
     @DeleteMapping("/code/{code}")
     @Transactional
@@ -20,11 +20,11 @@ public class RueWs {
     public Rue findByCode(String code) {
         return rueService.findByCode(code);
     }
-    @PostMapping("/")
+    @PostMapping()
     public int save(Rue rue) {
         return rueService.save(rue);
     }
-    @GetMapping("/")
+    @GetMapping()
     public List<Rue> findAll() {
         return rueService.findAll();
     }

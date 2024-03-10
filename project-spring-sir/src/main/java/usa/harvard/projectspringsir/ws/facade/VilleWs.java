@@ -9,7 +9,7 @@ import usa.harvard.projectspringsir.service.imple.communImpl.VilleServiceImpl;
 import java.util.List;
 
 @RestController
-@RequestMapping("api/ville")
+@RequestMapping("api/ville/")
 @CrossOrigin("*")
 public class VilleWs {
     @Autowired
@@ -29,12 +29,12 @@ public class VilleWs {
         return villeService.findByCode(code);
     }
 
-    @PostMapping("/")
+    @PostMapping()
     public int save(@RequestBody Ville ville) {
         return villeService.save(ville);
     }
 
-    @GetMapping("/")
+    @GetMapping()
     public List<Ville> findAll() {
         return villeService.findAll();
     }
