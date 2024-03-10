@@ -9,7 +9,7 @@ import usa.harvard.projectspringsir.service.intefaceService.communInter.Redevabl
 import java.util.List;
 
 @RestController
-@RequestMapping("api/Redevable")
+@RequestMapping("api/Redevable/")
 public class RedevableWs {
     @DeleteMapping("/code/{code}")
     @Transactional
@@ -20,11 +20,11 @@ public class RedevableWs {
     public Redevable findByCode(@PathVariable String code) {
         return redevableService.findByCode(code);
     }
-    @PostMapping("/")
+    @PostMapping()
     public int save(@RequestBody  Redevable redevable) {
         return redevableService.save(redevable);
     }
-    @GetMapping("/")
+    @GetMapping()
     public List<Redevable> findAll() {
         return redevableService.findAll();
     }

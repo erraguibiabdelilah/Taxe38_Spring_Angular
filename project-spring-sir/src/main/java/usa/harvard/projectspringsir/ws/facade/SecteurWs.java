@@ -9,7 +9,7 @@ import usa.harvard.projectspringsir.service.intefaceService.communInter.SecteurS
 import java.util.List;
 
 @RestController
-@RequestMapping("api/secteur")
+@RequestMapping("api/secteur/")
 public class SecteurWs {
     @DeleteMapping("/code/{code}")
     @Transactional
@@ -22,12 +22,12 @@ public class SecteurWs {
         return service.findByCode(code);
     }
 
-    @PostMapping("/")
+    @PostMapping()
     public int save(@RequestBody  Secteur secteur) {
         return service.save(secteur);
     }
 
-    @GetMapping("/")
+    @GetMapping()
     public List<Secteur> findAll() {
         return service.findAll();
     }

@@ -9,7 +9,7 @@ import usa.harvard.projectspringsir.service.intefaceService.communInter.Localser
 import java.util.List;
 
 @RestController
-@RequestMapping("api/Locale")
+@RequestMapping("api/Locale/")
 public class LocaleWs {
     @DeleteMapping("/code/{code}")
     @Transactional
@@ -20,11 +20,11 @@ public class LocaleWs {
     public Locale findByCode(@PathVariable String code) {
         return localservice.findByCode(code);
     }
-    @PostMapping("/")
+    @PostMapping()
     public int save(@RequestBody Locale ville) {
         return localservice.save(ville);
     }
-    @GetMapping("/")
+    @GetMapping()
     public List<Locale> findAll() {
         return localservice.findAll();
     }
