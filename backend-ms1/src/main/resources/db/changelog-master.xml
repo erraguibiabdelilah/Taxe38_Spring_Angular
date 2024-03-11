@@ -1,0 +1,12 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.0.xsd">
+
+            <include file="classpath:db/migration/changelog/communBean/Rue.xml"/>
+        <include file="classpath:db/migration/changelog/communBean/Locale.xml"/>
+        <include file="classpath:db/migration/changelog/taxe38Bean/Taxe38.xml"/>
+        <include file="classpath:db/migration/changelog/taxe38Bean/CategorieLocale.xml"/>
+        <include file="classpath:db/migration/changelog/communBean/Redevable.xml"/>
+
+</databaseChangeLog>

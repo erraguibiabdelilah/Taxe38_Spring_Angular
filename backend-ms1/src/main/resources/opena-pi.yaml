@@ -1,0 +1,452 @@
+openapi: 3.0.3
+info:
+  title: Title
+  description: Title
+  version: 1.0.0
+servers:
+  - url: 'https'
+paths:
+  /rues:
+    get:
+      summary: List all rues
+      operationId: listRues
+      tags:
+        - rues
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of rues
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/Rues'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a rue
+      operationId: createRues
+      tags:
+        - rues
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /rues/{rueId}:
+    get:
+      summary: Info for a specific rue
+      operationId: showRueById
+      tags:
+        - rues
+      parameters:
+        - name: rueId
+          in: path
+          required: true
+          description: The id of the rue to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/Rues'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /locales:
+    get:
+      summary: List all locales
+      operationId: listLocales
+      tags:
+        - locales
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of locales
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/Locales'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a locale
+      operationId: createLocales
+      tags:
+        - locales
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /locales/{localeId}:
+    get:
+      summary: Info for a specific locale
+      operationId: showLocaleById
+      tags:
+        - locales
+      parameters:
+        - name: localeId
+          in: path
+          required: true
+          description: The id of the locale to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/Locales'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /taxe38s:
+    get:
+      summary: List all taxe38s
+      operationId: listTaxe38s
+      tags:
+        - taxe38s
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of taxe38s
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/Taxe38s'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a taxe38
+      operationId: createTaxe38s
+      tags:
+        - taxe38s
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /taxe38s/{taxe38Id}:
+    get:
+      summary: Info for a specific taxe38
+      operationId: showTaxe38ById
+      tags:
+        - taxe38s
+      parameters:
+        - name: taxe38Id
+          in: path
+          required: true
+          description: The id of the taxe38 to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/Taxe38s'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /categorieLocales:
+    get:
+      summary: List all categorieLocales
+      operationId: listCategorieLocales
+      tags:
+        - categorieLocales
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of categorieLocales
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/CategorieLocales'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a categorieLocale
+      operationId: createCategorieLocales
+      tags:
+        - categorieLocales
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /categorieLocales/{categorieLocaleId}:
+    get:
+      summary: Info for a specific categorieLocale
+      operationId: showCategorieLocaleById
+      tags:
+        - categorieLocales
+      parameters:
+        - name: categorieLocaleId
+          in: path
+          required: true
+          description: The id of the categorieLocale to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/CategorieLocales'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /redevables:
+    get:
+      summary: List all redevables
+      operationId: listRedevables
+      tags:
+        - redevables
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of redevables
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/Redevables'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a redevable
+      operationId: createRedevables
+      tags:
+        - redevables
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /redevables/{redevableId}:
+    get:
+      summary: Info for a specific redevable
+      operationId: showRedevableById
+      tags:
+        - redevables
+      parameters:
+        - name: redevableId
+          in: path
+          required: true
+          description: The id of the redevable to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/Redevables'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  
+
+
+definitions:
+  Rue:
+    type: "object"
+    required:
+      - id
+      - code
+      - libelle
+    properties:
+      id:
+        type: int
+      code:
+        type: string
+      libelle:
+        type: string
+  Rues:
+    type: array
+    items:
+      $ref: '#/definitions/Rue'
+  Locale:
+    type: "object"
+    required:
+      - id
+      - code
+      - complementAdresse
+    properties:
+      id:
+        type: int
+      code:
+        type: string
+      complementAdresse:
+        type: string
+  Locales:
+    type: array
+    items:
+      $ref: '#/definitions/Locale'
+  Taxe38:
+    type: "object"
+    required:
+      - id
+      - code
+      - anne
+      - trim
+      - datePresentaion
+      - nombreMoisRetard
+      - montantBase
+      - montantRetardPremeirMois
+      - montantTotal
+    properties:
+      id:
+        type: int
+      code:
+        type: string
+      anne:
+        type: int
+      trim:
+        type: int
+      datePresentaion:
+        type: date
+      nombreMoisRetard:
+        type: int
+      montantBase:
+        type: number
+      montantRetardPremeirMois:
+        type: number
+      montantTotal:
+        type: number
+  Taxe38s:
+    type: array
+    items:
+      $ref: '#/definitions/Taxe38'
+  CategorieLocale:
+    type: "object"
+    required:
+      - id
+      - code
+      - libelle
+    properties:
+      id:
+        type: int
+      code:
+        type: string
+      libelle:
+        type: string
+  CategorieLocales:
+    type: array
+    items:
+      $ref: '#/definitions/CategorieLocale'
+  Redevable:
+    type: "object"
+    required:
+      - id
+      - email
+      - password
+      - cin
+      - nom
+      - prenom
+      - credentialsNonExpired
+      - enabled
+      - accountNonExpired
+      - accountNonLocked
+      - passwordChanged
+      - username
+      - password
+    properties:
+      id:
+        type: int
+      email:
+        type: string
+      password:
+        type: string
+      cin:
+        type: string
+      nom:
+        type: string
+      prenom:
+        type: string
+      credentialsNonExpired:
+        type: boolean
+      enabled:
+        type: boolean
+      accountNonExpired:
+        type: boolean
+      accountNonLocked:
+        type: boolean
+      passwordChanged:
+        type: boolean
+      username:
+        type: string
+      password:
+        type: string
+  Redevables:
+    type: array
+    items:
+      $ref: '#/definitions/Redevable'
+
+  Error:
+    type: "object"
+    required:
+      - code
+      - message
+    properties:
+      code:
+        type: integer
+        format: int32
+      message:
+        type: string

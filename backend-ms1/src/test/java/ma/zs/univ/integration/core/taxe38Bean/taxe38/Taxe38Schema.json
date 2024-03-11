@@ -1,0 +1,20 @@
+{
+    "code": "#string",
+    "redevable": {"id": "#number"},
+    "locale": {"id": "#number"},
+    "anne": "#number",
+    "trim": "#number",
+    "nombreMoisRetard": "#number",
+    "montantBase": "#number",
+    "montantRetardPremeirMois": "#number",
+    "montantTotal": "#number"
+
+}
+
+
+
+
+
+
+
+

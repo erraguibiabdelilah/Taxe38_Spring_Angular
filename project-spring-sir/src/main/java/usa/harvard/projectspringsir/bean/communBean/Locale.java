@@ -22,11 +22,5 @@ public class Locale {
     @ManyToOne
     private Redevable redevable;
 
-    public Rue getRue() {
-        return rue;
-    }
 
-    public void setRue(Rue rue) {
-        this.rue = rue;
-    }
 }

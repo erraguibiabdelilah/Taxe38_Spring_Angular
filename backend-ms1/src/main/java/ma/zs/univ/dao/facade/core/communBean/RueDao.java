@@ -1,0 +1,20 @@
+package ma.zs.univ.dao.facade.core.communBean;
+
+import org.springframework.data.jpa.repository.Query;
+import ma.zs.univ.zynerator.repository.AbstractRepository;
+import ma.zs.univ.bean.core.communBean.Rue;
+import org.springframework.stereotype.Repository;
+import ma.zs.univ.bean.core.communBean.Rue;
+import java.util.List;
+
+
+@Repository
+public interface RueDao extends AbstractRepository<Rue,Long>  {
+    Rue findByCode(String code);
+    int deleteByCode(String code);
+
+
+    @Query("SELECT NEW Rue(item.id,item.libelle) FROM Rue item")
+    List<Rue> findAllOptimized();
+
+}
